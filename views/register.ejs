@@ -1,0 +1,36 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3"><i style="font-size: 2rem;" class="bx bxs-user-plus"></i> Register</h1>
+            <div class="container">
+                <%- include('./partials/message'); %>
+                <form action="/users/register" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" type="name" id="name" placeholder="Enter name" name="name"
+                            value="<%= typeof name != 'undefined'? name: '' %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" id="email" placeholder="Enter email" name="email"
+                            value="<%= typeof email != 'undefined'? email: '' %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Create Password</label>
+                        <input class="form-control" type="password" id="password" placeholder="Create password"
+                            name="password" value="<%= typeof password != 'undefined'? password: '' %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Name</label>
+                        <input class="form-control" type="password" id="password2" placeholder="Confirm Password2"
+                            name="password2" value="<%= typeof password2 != 'undefined'? password2: '' %>">
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-primary btn-block" type="submit" value="Register">
+                    </div>
+                </form>
+                <p class="lead">Have an account?&nbsp; <a href="/users/login">Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>
